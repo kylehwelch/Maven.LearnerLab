@@ -11,18 +11,18 @@ public class People<E extends Person> implements Iterable<E> {
         personList.add(person);
     }
 
-    public Person findById(long id){
+    public E findById(long id){
         for (int i = 0 ; i < personList.size() ; i++){
             if (personList.get(i).getId() == id) return personList.get(i);
         }
         return null;
     }
 
-    public boolean contains(Person person) {
+    public boolean contains(E person) {
         return (personList.contains(person));
     }
 
-    public void remove(Person person) {
+    public void remove(E person) {
         personList.remove(person);
     }
 
