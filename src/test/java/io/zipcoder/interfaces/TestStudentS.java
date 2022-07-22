@@ -3,7 +3,9 @@ package io.zipcoder.interfaces;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestStudents {
+import java.util.Arrays;
+
+public class TestStudentS {
 
     @Test
     public void testAddedStudents(){
@@ -18,7 +20,17 @@ public class TestStudents {
         Student student1 = new Student("harley", 1);
         Student student2 = new Student("biff", 2);
         Student student3 = new Student("brrrgeet", 3);
-        Assert.assertEquals(Students.getInstance().getSize(), 3);
+        Assert.assertEquals(3 ,Students.getInstance().getSize());
+    }
+
+    @Test
+    public void testStudentsArray() {
+        Student student1 = new Student("harley", 1);
+        Student student2 = new Student("biff", 2);
+        Student student3 = new Student("brrrgeet", 3);
+        System.out.println(Students.getInstance().personList.get(2).getName());
+
+
     }
 
 }
