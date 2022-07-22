@@ -20,4 +20,7 @@ public final class Instructors extends People<Instructor>{
     }
 
 
+    public Instructor[] toArray() {
+        return getInstance().getArray();
+    }
 }

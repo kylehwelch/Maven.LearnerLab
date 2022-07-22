@@ -21,4 +21,7 @@ public final class Students extends People<Student> {
     }
 
 
+    public Student[] toArray() {
+        return getInstance().getArray();
+    }
 }

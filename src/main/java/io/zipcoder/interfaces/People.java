@@ -2,7 +2,7 @@ package io.zipcoder.interfaces;
 
 import java.util.*;
 
-public class People<E extends Person> implements Iterable<E> {
+public abstract class People<E extends Person> implements Iterable<E> {
 
     List<E> personList = new ArrayList<E>();
 
@@ -38,9 +38,7 @@ public class People<E extends Person> implements Iterable<E> {
         return personList.size();
     }
 
-    public Object[] toArray(){
-        return personList.toArray();
-    }
+    public abstract E[] toArray();
 
     public Iterator<E> iterator() {
         return personList.iterator();
