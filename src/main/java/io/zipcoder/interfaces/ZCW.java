@@ -4,18 +4,18 @@ import java.util.*;
 
 public final class ZCW {
 
-    Person p;
-    public Student[] students = Students.getInstance().getArray();
-    public Instructor[] instructors = Instructors.getInstance().getArray();
+    Students students = Students.getInstance();
+    Instructors instructors = Instructors.getInstance();
+//    public Student[] students = Students.getInstance().getArray();
+//    public Instructor[] instructors = Instructors.getInstance().getArray();
 
     public void hostLecture(Teacher teacher, double numberOfHours){
-        teacher.lecture(students, numberOfHours);
+        teacher.lecture(students.getArray(), numberOfHours);
     }
 
     public void hostLecture(long id, double numberOfHours){
-        People ppl = new People();
-        Teacher teacher = (Teacher) ppl.findById(id);
-        teacher.lecture(students, numberOfHours);
+        Instructor fart = instructors.findById(id);
+        fart.lecture(students.getArray(), numberOfHours);
     }
 
     public HashMap<Student, Double> getStudyMap(){
