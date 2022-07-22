@@ -14,7 +14,6 @@ public class TestZCW {
         Student s3 = new Student("henry", 03);
         Student s4 = new Student("Fitru", 04);
         Student s5 = new Student("beep", 05);
-        Instructor i1 = new Instructor("leon", 1);
 
         Assert.assertEquals(5, Students.getInstance().getSize());
     }
@@ -29,9 +28,8 @@ public class TestZCW {
         Student s3 = new Student("henry", 03);
         Student s4 = new Student("Fitru", 04);
         Student s5 = new Student("beep", 05);
-        Instructor i1 = new Instructor("leon", 1);
 
-        zcw.hostLecture(i1, 15);
+        zcw.hostLecture(Educator.DOLIO, 15);
 
         Assert.assertEquals(s1.getTotalStudyTime(), 3, 0.0);
     }
@@ -46,9 +44,8 @@ public class TestZCW {
         Student s3 = new Student("henry", 03);
         Student s4 = new Student("Fitru", 04);
         Student s5 = new Student("beep", 05);
-        Instructor i1 = new Instructor("leon", 1);
 
-        zcw.hostLecture(1, 15);
+        zcw.hostLecture(Educator.KAREN, 15);
 
         Assert.assertEquals(s1.getTotalStudyTime(), 3, 0.0);
     }

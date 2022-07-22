@@ -9,6 +9,6 @@
         <module name="interfaces-1" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="18" />
+    <bytecodeTargetLevel target="1.8" />
   </component>
 </project>
